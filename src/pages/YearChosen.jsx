@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { apiMovies } from "../api/moviesApi.js";
 import Header from "../sections/Header.jsx";
 import CardComponent from "../components/CardComponent.jsx";
+import Footer from "../sections/Footer.jsx";
 
 const YearChosen = () => {
   const { year } = useParams();
@@ -55,6 +56,7 @@ const YearChosen = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

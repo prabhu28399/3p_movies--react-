@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { MovieContext } from "../context/MovieContext";
 import Header from "../sections/Header";
 import CardComponent from "../components/CardComponent";
+import Footer from "../sections/Footer";
 
 const GenreChosen = () => {
   const { genre } = useParams();
@@ -39,6 +40,7 @@ const GenreChosen = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

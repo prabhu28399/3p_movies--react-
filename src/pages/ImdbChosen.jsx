@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { MovieContext } from "../context/MovieContext";
 import Header from "../sections/Header.jsx";
 import CardComponent from "../components/CardComponent.jsx";
+import Footer from "../sections/Footer.jsx";
 
 const ImdbChosen = () => {
   const { movies, isLoading } = useContext(MovieContext);
@@ -33,6 +34,7 @@ const ImdbChosen = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
