@@ -79,7 +79,6 @@ const HeaderComponent = ({
             "Language",
             "Genre",
             "Year",
-            "IMDB",
             "Web Series",
             "TV Series",
             "PC Games",
@@ -88,7 +87,6 @@ const HeaderComponent = ({
               <button className="w-full md:w-auto px-5 text-white text-center rounded-lg hover:bg-gray-700 transition duration-200">
                 {item}
               </button>
-
               {/* Hover Dropdowns */}
               {item === "Language" && (
                 <div className="absolute bg-white text-black p-2 shadow-lg hidden group-hover:block z-10 max-h-60 overflow-y-auto">
@@ -103,7 +101,6 @@ const HeaderComponent = ({
                   ))}
                 </div>
               )}
-
               {item === "Genre" && (
                 <div className="absolute bg-white text-black p-2 shadow-lg hidden group-hover:block z-10">
                   {genres.map((genre) => (
@@ -117,17 +114,7 @@ const HeaderComponent = ({
                   ))}
                 </div>
               )}
-
-              {item === "IMDB" && (
-                <div className="absolute bg-white text-black p-2 shadow-lg hidden group-hover:block z-10">
-                  <p
-                    className="px-3 py-1 hover:bg-gray-200 cursor-pointer"
-                    onClick={() => navigate("/imdb")}
-                  >
-                    Top IMDb Movies
-                  </p>
-                </div>
-              )}
+              {/* ✅ Only IMDb gets an onClick */}
 
               {item === "Year" && (
                 <div className="absolute bg-white text-black p-2 shadow-lg hidden group-hover:block z-10 max-h-60 overflow-y-auto">
@@ -144,6 +131,12 @@ const HeaderComponent = ({
               )}
             </div>
           ))}
+          <button
+            className="w-full md:w-auto px-5 text-white text-center rounded-lg hover:bg-gray-700 transition duration-200"
+            onClick={() => navigate("/imdb")}
+          >
+            IMDB
+          </button>
         </div>
       </nav>
 

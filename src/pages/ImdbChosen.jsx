@@ -19,9 +19,7 @@ const ImdbChosen = () => {
       {/* Movie Display Section */}
       <div className="bg-black py-10 flex justify-center">
         <div className="w-[90%] max-w-[1200px]">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Top IMDb Rated Movies
-          </h2>
+          <h2 className="text-3xl font-bold  mb-6">Top IMDb Rated Movies</h2>
           {isLoading ? (
             <p className="text-center">Loading movies...</p>
           ) : sortedMovies.length > 0 ? (

@@ -41,9 +41,7 @@ const YearChosen = () => {
       {/* Movie Display Section (Using the Reference Structure) */}
       <div className="bg-black py-10 flex justify-center">
         <div className="w-[90%] max-w-[1200px]">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Movies from {year}
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">Movies from {year}</h2>
           {loading ? (
             <p className="text-center">Loading movies...</p>
           ) : movies.length > 0 ? (
