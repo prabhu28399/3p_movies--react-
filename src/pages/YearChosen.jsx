@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { apiMovies } from "../api/moviesApi.js";
 import Header from "../sections/Header.jsx";
+import CardComponent from "../components/CardComponent.jsx";
 
 const YearChosen = () => {
   const { year } = useParams();
@@ -28,47 +29,34 @@ const YearChosen = () => {
         setLoading(false);
       }
     };
+
     fetchMoviesByYear();
   }, [year]);
 
-  if (loading) {
-    return <div className="text-center text-white">Loading movies...</div>;
-  }
-
   return (
-    <div>
+    <div className="bg-gradient-to-b from-blue-900 via-gray-800 to-black text-white min-h-screen">
+      {/* Full-width Header */}
       <Header />
-      <h2 className="text-3xl font-bold mb-6">Movies from {year}</h2>
-      {movies.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {movies.map((movie) => (
-            <div
-              key={movie.id || movie.title}
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-            >
-              {/* ✅ Debugging: Log poster URL */}
-              {console.log("Image URL:", movie.posterUrl)}
 
-              <img
-                src={movie.posterUrl}
-                alt={movie.title}
-                className="w-full h-60 object-cover"
-                onError={(e) => (e.target.src = "/default-image.jpg")} // ✅ Handle broken images
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">{movie.title}</h3>
-                <p className="text-gray-400">
-                  {Array.isArray(movie.genre)
-                    ? movie.genre.join(", ")
-                    : movie.genre}
-                </p>
-              </div>
+      {/* Movie Display Section (Using the Reference Structure) */}
+      <div className="bg-black py-10 flex justify-center">
+        <div className="w-[90%] max-w-[1200px]">
+          <h2 className="text-3xl font-bold text-center mb-6">
+            Movies from {year}
+          </h2>
+          {loading ? (
+            <p className="text-center">Loading movies...</p>
+          ) : movies.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {movies.map((movie) => (
+                <CardComponent key={movie.id || movie.title} movie={movie} />
+              ))}
             </div>
-          ))}
+          ) : (
+            <p className="text-center">No movies found for {year}.</p>
+          )}
         </div>
-      ) : (
-        <p className="text-gray-400">No movies found for {year}.</p>
-      )}
+      </div>
     </div>
   );
 };

@@ -118,6 +118,17 @@ const HeaderComponent = ({
                 </div>
               )}
 
+              {item === "IMDB" && (
+                <div className="absolute bg-white text-black p-2 shadow-lg hidden group-hover:block z-10">
+                  <p
+                    className="px-3 py-1 hover:bg-gray-200 cursor-pointer"
+                    onClick={() => navigate("/imdb")}
+                  >
+                    Top IMDb Movies
+                  </p>
+                </div>
+              )}
+
               {item === "Year" && (
                 <div className="absolute bg-white text-black p-2 shadow-lg hidden group-hover:block z-10 max-h-60 overflow-y-auto">
                   {years.slice(0, 10).map((year) => (

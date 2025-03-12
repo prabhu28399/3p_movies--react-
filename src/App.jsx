@@ -5,6 +5,7 @@ import LangChosen from "./pages/LangChosen";
 import GenreChosen from "./pages/GenreChosen";
 import YearChosen from "./pages/YearChosen";
 import HomePage from "../src/pages/HomePage.jsx";
+import ImdbChosen from "./pages/ImdbChosen.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/language/:lang" element={<LangChosen />} />
           <Route path="/genre/:genre" element={<GenreChosen />} />
           <Route path="/year/:year" element={<YearChosen />} />
+          <Route path="/imdb" element={<ImdbChosen />} />
         </Routes>
       </Router>
     </MovieProvider>
