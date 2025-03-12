@@ -6,6 +6,7 @@ import GenreChosen from "./pages/GenreChosen";
 import YearChosen from "./pages/YearChosen";
 import HomePage from "../src/pages/HomePage.jsx";
 import ImdbChosen from "./pages/ImdbChosen.jsx";
+import MovieDesc from "./pages/MovieDesc.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/genre/:genre" element={<GenreChosen />} />
           <Route path="/year/:year" element={<YearChosen />} />
           <Route path="/imdb" element={<ImdbChosen />} />
+          <Route path="/movie/:id" element={<MovieDesc />} />
         </Routes>
       </Router>
     </MovieProvider>

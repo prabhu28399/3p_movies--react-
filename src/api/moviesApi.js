@@ -1,6 +1,7 @@
 export const apiMovies = async () => {
   return [
     {
+      id: 1,
       title: "Avatar",
       year: 2004,
       imdb: 6.7,
@@ -10,8 +11,11 @@ export const apiMovies = async () => {
         "https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_.jpg",
       description:
         "Download Avatar (2004) Multi Audio (Hindi-English-Telugu) Bluray 480p [400MB] || 720p [1.2GB] || 1080p [2.5GB]",
+      storyline:
+        "Avatar (2009) is a sci-fi epic directed by James Cameron, set on the alien world of Pandora, where humans exploit resources while a paraplegic Marine, Jake Sully, integrates with the native Na’vi. The film explores themes of environmentalism, colonialism, and identity through stunning visual effects and groundbreaking 3D technology.",
     },
     {
+      id: 2,
       title: "Ant-Man",
       year: 2015,
       imdb: 7.3,
@@ -22,6 +26,7 @@ export const apiMovies = async () => {
       description: "Download Ant-Man (2015) 720p [850MB] || 1080p [1.9GB]",
     },
     {
+      id: 3,
       title: "Alita: Battle Angel",
       year: 2019,
       imdb: 7.3,
@@ -32,6 +37,7 @@ export const apiMovies = async () => {
         "Download Alita: Battle Angel (2019) 720p [1GB] || 1080p [2.3GB]",
     },
     {
+      id: 4,
       title: "Lights Out",
       year: 2016,
       imdb: 6.3,
@@ -42,6 +48,7 @@ export const apiMovies = async () => {
       description: "Download Lights Out (2016) 720p [750MB] || 1080p [1.8GB]",
     },
     {
+      id: 5,
       title: "A Quiet Place",
       year: 2018,
       imdb: 7.5,
@@ -52,6 +59,7 @@ export const apiMovies = async () => {
       description: "Download A Quiet Place (2018) 720p [950MB] || 1080p [2GB]",
     },
     {
+      id: 6,
       title: "Clash of the Titans",
       year: 2010,
       imdb: 5.8,
@@ -63,6 +71,7 @@ export const apiMovies = async () => {
         "Download Clash of the Titans (2010) 720p [1GB] || 1080p [2.5GB]",
     },
     {
+      id: 7,
       title: "Interstellar",
       year: 2014,
       imdb: 8.6,
@@ -73,6 +82,7 @@ export const apiMovies = async () => {
       description: "Download Interstellar (2014) 720p [1.2GB] || 1080p [3GB]",
     },
     {
+      id: 8,
       title: "The Nun",
       year: 2018,
       imdb: 5.3,
@@ -83,6 +93,7 @@ export const apiMovies = async () => {
       description: "Download The Nun (2018) 720p [900MB] || 1080p [2GB]",
     },
     {
+      id: 9,
       title: "Top Gun: Maverick",
       year: 2022,
       imdb: 8.3,
@@ -94,6 +105,7 @@ export const apiMovies = async () => {
         "Download Top Gun: Maverick (2022) 720p [1.5GB] || 1080p [3GB]",
     },
     {
+      id: 10,
       title: "Kung Fu Hustle",
       year: 2004,
       imdb: 7.7,
@@ -104,6 +116,7 @@ export const apiMovies = async () => {
       description: "Download Kung Fu Hustle (2004) 720p [850MB] || 1080p [2GB]",
     },
     {
+      id: 11,
       title: "Mission: Impossible - Ghost Protocol",
       year: 2011,
       imdb: 7.4,
@@ -115,6 +128,7 @@ export const apiMovies = async () => {
         "Download Mission: Impossible - Ghost Protocol (2011) 720p [1GB] || 1080p [2.5GB]",
     },
     {
+      id: 12,
       title: "Dune",
       year: 2021,
       imdb: 8.1,
