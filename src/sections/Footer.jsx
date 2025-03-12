@@ -1,4 +1,12 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faTwitter,
+  faWhatsapp,
+  faFacebook,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -20,9 +28,9 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg">Contact Us</h3>
           <p className="text-gray-400 text-sm mt-2">
-            ITPL Road <br />
-            Whitefield, Bangalore <br />
-            Karnataka, PIN 560066, India
+            ECIL <br />
+            North Kamalanagar, Hyderabad <br />
+            Telangana, PIN 500062, India
           </p>
           <p className="text-gray-400 mt-2 text-sm">support@3pmovies.com</p>
           <p className="text-gray-400 mt-1 text-sm">+91 - 9505171479</p>
@@ -73,17 +81,26 @@ const Footer = () => {
           </div>
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-              📘
+            <a
+              href="https://www.instagram.com/prabhu_unofficial_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              className="text-gray-400 hover:text-white"
+            >
+              <FontAwesomeIcon icon={faInstagram} size="lg" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              🐦
+              <FontAwesomeIcon icon={faTwitter} size="lg" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              📷
+              <FontAwesomeIcon icon={faWhatsapp} size="lg" />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
-              ▶️
+              <FontAwesomeIcon icon={faFacebook} size="lg" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prabhu-parshaka/"
+              className="text-gray-400 hover:text-white"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
             </a>
           </div>
         </div>
